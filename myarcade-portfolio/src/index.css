@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+/* Your arcade styles below */
+
+body {
+    margin: 0;
+    height: 100vh;
+    overflow: hidden;
+
+    background: #020617;
+    color: #00fff7;
+    font-family: 'Press Start 2P', cursive;
+}
+
+/* FULL SCREEN SECTIONS */
+.section,
+.home {
+    position: fixed;
+    inset: 0;
+
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    background: #020617;
+    text-align: center;
+}
+
+.active {
+    display: flex;
+    z-index: 10;
+}
+
+/* TEXT SIZES */
+h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+}
+
+h3 {
+    font-size: 16px;
+}
+
+p, span {
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+/* INSERT COIN */
+.insert-coin {
+    color: yellow;
+    font-size: 16px;
+    margin-bottom: 30px;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    50% { opacity: 0.3; }
+}
+
+/* BUTTONS */
+button {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+/* START BUTTON */
+.start-btn {
+    margin-top: 30px;
+    padding: 15px 25px;
+    border: 2px solid #00fff7;
+    background: none;
+    color: #00fff7;
+}
+
+.start-btn:hover {
+    background: #00fff7;
+    color: #020617;
+}
+
+/* MENU */
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 40px;
+}
+
+.menu li {
+    margin: 25px 0;
+}
+
+.menu button {
+    background: none;
+    border: none;
+    color: #00fff7;
+    font-size: 14px;
+}
+
+.menu button:hover {
+    color: #ff00ff;
+}
+
+/* BACK BUTTON */
+.back-btn {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    background: none;
+    border: none;
+    color: #00fff7;
+    font-size: 12px;
+}
+
+.back-btn:hover {
+    color: #ff00ff;
+}
+
+/* PROFILE */
+.avatar-img {
+    width: 220px;
+    margin: 30px 0;
+    border: 3px solid #00fff7;
+}
+
+/* LEVELS */
+.level-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+    width: 80%;
+}
+
+.level {
+    border: 2px solid #00fff7;
+    padding: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.level img {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.level:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #00fff7;
+}
+
+.boss {
+    border-color: red;
+    opacity: 0.5;
+}
+
+/* SKILLS */
+.skill {
+    margin: 25px auto;
+    width: 50%;
+    text-align: left;
+}
+
+.bar {
+    height: 20px;
+    border: 2px solid #00fff7;
+    margin-top: 8px;
+}
+
+.fill {
+    height: 100%;
+    background: #00fff7;
+    box-shadow: 0 0 8px #00fff7;
+}
+
+/* MODAL */
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.8);
+}
+
+.modal-content {
+    background: #020617;
+    margin: 5% auto;
+    padding: 30px;
+    width: 70%;
+    border: 2px solid #00fff7;
+}
+
+.close {
+    float: right;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-top: 20px;
+}
+
+#contact a {
+    color: #00fff7;
+    text-decoration: none;
+}
+
+#contact a:hover {
+    color: #ff00ff;
+}
+
+/* Add this to your src/index.css */
+
+.menu-option-btn {
+  background: transparent;
+  border: none;
+  color: #00fff7;
+  font-family: 'Press Start 2P', cursive; /* Ensure your font is linked */
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  text-transform: uppercase;
+}
+
+.menu-option-btn:hover {
+  color: #ff00ff;
+  transform: scale(1.1);
+  text-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff;
+}
+
+.neon-glow {
+  text-shadow: 0 0 10px #00fff7, 0 0 20px #00fff7;
+}
